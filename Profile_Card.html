@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Profile Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      display: flex;
+      max-width: 450px;
+      width: 90%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 20px;
+    }
+
+    .info {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .info h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .info p {
+      margin: 0 0 20px 0;
+      color: #555;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .buttons a:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        flex-direction: column;
+        width: 70vw;
+        align-items: center;
+      }
+
+      .card img {
+        width: 120px;
+        height: 120px;
+        margin: 20px 0 10px 0;
+      }
+
+      .info {
+        padding: 10px 20px;
+        text-align: center;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .buttons a {
+        width: 90%;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://png.pngtree.com/png-vector/20250512/ourmid/pngtree-default-avatar-profile-icon-gray-placeholder-vector-png-image_16213764.png" alt="Profile Image">
+    <div class="info">
+      <h2>Rahul Verma</h2>
+      <p>Web developer passionate about creating beautiful and responsive websites.</p>
+      <div class="buttons">
+        <a href="#">Contact</a>
+        <a href="#">Portfolio</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
