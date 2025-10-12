@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ferris Wheel Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: white;
+      margin: 0;
+    }
+
+    .wheel {
+      width: 400px;  
+      height: 400px;
+      border: 4px solid #444;
+      border-radius: 50%;
+      position: relative;
+      animation: spin 12s linear infinite;
+    }
+
+    .gondola {
+      width: 70px;  
+      height: 70px;
+      background: yellow;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -35px; 
+      animation: colorChange 6s infinite;
+    }
+
+    
+    .g1 { transform: rotate(0deg) translate(180px) rotate(0deg); }
+    .g2 { transform: rotate(60deg) translate(180px) rotate(-60deg); }
+    .g3 { transform: rotate(120deg) translate(180px) rotate(-120deg); }
+    .g4 { transform: rotate(180deg) translate(180px) rotate(-180deg); }
+    .g5 { transform: rotate(240deg) translate(180px) rotate(-240deg); }
+    .g6 { transform: rotate(300deg) translate(180px) rotate(-300deg); }
+
+    
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    
+    @keyframes colorChange {
+      0%   { background: yellow; }
+      20%  { background: orange; }
+      40%  { background: red; }
+      60%  { background: yellow; }
+      80%  { background: violet; }
+      100% { background: yellow; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wheel">
+    <div class="gondola g1"></div>
+    <div class="gondola g2"></div>
+    <div class="gondola g3"></div>
+    <div class="gondola g4"></div>
+    <div class="gondola g5"></div>
+    <div class="gondola g6"></div>
+  </div>
+</body>
+</html>
